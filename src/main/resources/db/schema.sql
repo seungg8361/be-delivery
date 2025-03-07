@@ -1,3 +1,4 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 CREATE TABLE IF NOT EXISTS p_ai_interactions (
     create_at TIMESTAMP(6) NOT NULL,
@@ -172,7 +173,9 @@ CREATE TABLE IF NOT EXISTS p_store_update_requests (
     PRIMARY KEY (id)
     );
 
+
 CREATE TABLE IF NOT EXISTS p_stores (
+    is_hidden BOOLEAN NOT NULL,
     create_at TIMESTAMP(6) NOT NULL,
     delete_at TIMESTAMP(6),
     update_at TIMESTAMP(6),

@@ -5,7 +5,7 @@ spring:
     redis:
       host: ${REDIS_HOST}
       port: 6379
-      password:
+       password: ${REDIS_PASSWORD}
   sql:
     init:
       mode: always
